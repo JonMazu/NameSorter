@@ -1,4 +1,3 @@
-# NameSorter
 How to Run
 Make sure Sort Me.txt is in the same folder.
 
@@ -7,5 +6,4 @@ open a terminal in this folder and type
 or 
 "python3 JonMazhomework6.py" 
 Output will be in the "output.txt" file.
-
 
