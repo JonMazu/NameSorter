@@ -13,7 +13,7 @@ fileLoc = args.file
 if(args.test):
     fileLoc = './TestData/Sort Me.txt'
 
-def testCode(output,expected):
+def test_selectionSort(output,expected):
     for x in range(0,len(output)):
          if(output[x] != expected[x]):
              print("Somethings Wrong with the Sort!")
@@ -28,7 +28,6 @@ def testCode(output,expected):
         if(output[x] != expected[x]):
              print("Somethings Wrong with the Sort!")
              print(output[x] +" "+ expected[x])
-
              return -1
     return 0
 
@@ -84,11 +83,9 @@ if(args.test):
             output.append(words)
     for words in expectedFile.readlines():
         expected.append(words.strip())
-    result = testCode(output,expected)
+    result = test_selectionSort(output,expected)
     if(result == -1):
-        print("!!")
-    else:
-        print("Looks like everything worked. No Bugs to report!")
+        assert result == -1
 if(not args.reversed):
     with open("./output.txt","w") as outputFile:
         for wordRows in wordArray:
