@@ -84,7 +84,8 @@ if(args.test):
     for words in expectedFile.readlines():
         expected.append(words.strip())
     result = test_selectionSort(output,expected)
-    assert result == -1
+    if(result == -1):
+        assert result == -1
 if(not args.reversed):
     with open("./output.txt","w") as outputFile:
         for wordRows in wordArray:
