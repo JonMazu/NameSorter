@@ -37,7 +37,7 @@ def selectionSort(wordArray):
         index = i
         #Selection Sort
         for y in range(i+1,len(wordArray)):
-            if(ord(wordArray[index][0:1]) == ord(wordArray[y][0:1])):
+            if(ord(wordArray[index][0:1]) > ord(wordArray[y][0:1])):
                 index = y
             #If they are Equal we check the next character. if those are Equal. God have mercy on our soul
             if(ord(wordArray[index][0:1]) == ord(wordArray[y][0:1])):
